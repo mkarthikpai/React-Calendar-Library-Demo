@@ -1,0 +1,84 @@
+@reference "tailwindcss";
+
+@layer components {
+  .calendar-parent .react-calendar__tile {
+    @apply border border-[#4F4F4F] relative h-[50%];
+  }
+
+  .calendar-parent .react-calendar__tile > abbr {
+    @apply text-white absolute top-1 right-3;
+  }
+
+  .calendar-parent .react-calendar__tile > div {
+    @apply h-full w-full;
+  }
+
+  .calendar-parent .react-calendar__tile--now > abbr {
+    @apply bg-[#4581FF] py-1 px-2 rounded-sm;
+  }
+
+  .calendar-parent .react-calendar__tile--now {
+    @apply border border-[#0D81FF] bg-[#171F2F];
+  }
+
+  .calendar-parent .react-calendar__tile--active {
+    @apply border border-[#0D81FF];
+  }
+
+  .calendar-parent .react-calendar__navigation {
+    @apply h-px w-full bg-gradient-to-r from-transparent via-gray-600 to-transparent inline-block;
+  }
+  .calendar-parent .react-calendar__navigation__prev-button {
+    @apply mt-4;
+  }
+
+  .calendar-parent .react-calendar__viewContainer {
+    @apply w-full mt-4 h-[calc(100%-4rem)];
+  }
+  .calendar-parent .react-calendar__tile {
+    @apply cursor-pointer hover:bg-[#303030];
+  }
+
+  /* .calendar-parent .react-calendar__viewContainer {
+    @apply w-full bg-gradient-to-r from-transparent via-gray-600 to-transparent mt-4 h-[calc(100%-4rem)];
+  } */
+
+  .calendar-parent .react-calendar__navigation__label__labelText {
+    @apply text-white;
+  }
+
+  .calendar-parent .react-calendar__month-view {
+    @apply h-full;
+  }
+
+  .calendar-parent .react-calendar__month-view__weekdays {
+    @apply text-white pt-2 pb-2;
+  }
+
+  .calendar-parent .react-calendar__month-view__weekdays > div > abbr {
+    @apply no-underline;
+  }
+
+  .calendar-parent .react-calendar__month-view > div:nth-child(1) {
+    @apply h-full;
+  }
+
+  .calendar-parent
+    .react-calendar__month-view
+    > div:nth-child(1)
+    > div:nth-child(1) {
+    @apply h-full;
+  }
+
+  .calendar-parent .react-calendar__month-view__days {
+    @apply h-[calc(100%-3rem)] overflow-auto;
+  }
+
+  .calendar-parent .react-calendar__navigation__next-button {
+    @apply border-0 bg-[#4581ff] text-white p-1 text-base rounded-sm cursor-pointer ml-3;
+  }
+
+  .calendar-parent .react-calendar__navigation__prev-button {
+    @apply border-0 bg-[#4581ff] text-white p-1 text-base rounded-sm cursor-pointer mr-3;
+  }
+}
